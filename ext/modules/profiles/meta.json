@@ -1,0 +1,20 @@
+{
+"label":"Profile",
+"menu":"My Account",
+"order":"2",
+"icon":"fa-user",
+"user_levels":["Admin","Manager","Profile"],
+
+"permissions":
+	{
+		"Manager":{
+			"Edit Country":"Yes",
+			"Upload/Delete Profile Image":"Yes"
+		},
+		
+		"Profile":{
+			"Edit Country":"Yes",
+			"Upload/Delete Profile Image":"Yes"
+		}
+	}
+}
