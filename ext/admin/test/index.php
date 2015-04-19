@@ -21,7 +21,7 @@ Original work Copyright (c) 2012 [Gamonoid Media Pvt. Ltd]
 Developer: Thilina Hasantha (thilina.hasantha[at]gmail.com / facebook.com/thilinah)
  */
 
-$moduleName = 'company_structure';
+$moduleName = 'test';
 define('MODULE_PATH',dirname(__FILE__));
 include APP_BASE_PATH.'header.php';
 include APP_BASE_PATH.'modulejslibs.inc.php';
@@ -54,43 +54,39 @@ path.link {
 <div class="span9">
 			  
 	<ul class="nav nav-tabs" id="modTab" style="margin-bottom:0px;margin-left:5px;border-bottom: none;">
-		<li class="active"><a id="tabCompanyStructure" href="#tabPageCompanyStructure">Company Structure</a></li>
-		<li><a id="tabCompanyGraph" href="#tabPageCompanyGraph">Company Graph</a></li>
+		<li class="active"><a id="tabTest" href="#tabPageTest">Test Module</a></li>
 	</ul>
 	 
 	<div class="tab-content">
-		<div class="tab-pane active" id="tabPageCompanyStructure">
-			<div id="CompanyStructure" class="reviewBlock" data-content="List" style="padding-left:5px;">
+		<div class="tab-pane active" id="tabPageTest">
+			<div id="Test" class="reviewBlock" data-content="List" style="padding-left:5px;">
 		
 			</div>
-			<div id="CompanyStructureForm" class="reviewBlock" data-content="Form" style="padding-left:5px;display:none;">
+			<div id="TestForm" class="reviewBlock" data-content="Form" style="padding-left:5px;display:none;">
 		
 			</div>
-		</div>
-		<div class="tab-pane reviewBlock" id="tabPageCompanyGraph" style="overflow-x: scroll;">
-			
 		</div>
 	</div>
 
 </div>
 <script>
 var modJsList = new Array();
-modJsList['tabCompanyStructure'] 	= new CompanyStructureAdapter('CompanyStructure');
+modJsList['tabTest'] 	= new TestAdapter('Test');
 
-<?php if(isset($modulePermissions['perm']['Add Company Structure']) && $modulePermissions['perm']['Add Company Structure'] == "No"){?>
-modJsList['tabCompanyStructure'].setShowAddNew(false);
+<?php if(isset($modulePermissions['perm']['Add Record']) && $modulePermissions['perm']['Add Record'] == "No"){?>
+modJsList['tabTest'].setShowAddNew(false);
 <?php }?>
-<?php if(isset($modulePermissions['perm']['Delete Company Structure']) && $modulePermissions['perm']['Delete Company Structure'] == "No"){?>
-modJsList['tabCompanyStructure'].setShowDelete(false);
+<?php if(isset($modulePermissions['perm']['Delete Record']) && $modulePermissions['perm']['Delete Record'] == "No"){?>
+modJsList['tabTest'].setShowDelete(false);
 <?php }?>
-<?php if(isset($modulePermissions['perm']['Edit Company Structure']) && $modulePermissions['perm']['Edit Company Structure'] == "No"){?>
-modJsList['tabCompanyStructure'].setShowEdit(false);
+<?php if(isset($modulePermissions['perm']['Edit Record']) && $modulePermissions['perm']['Edit Record'] == "No"){?>
+modJsList['tabTest'].setShowEdit(false);
 <?php }?>
 
 
-modJsList['tabCompanyGraph'] = new CompanyGraphAdapter('CompanyStructure');
+//modJsList['tabCompanyGraph'] = new CompanyGraphAdapter('Test');
 
-var modJs = modJsList['tabCompanyStructure'];
+var modJs = modJsList['tabTest'];
 
 </script>
 <?php include APP_BASE_PATH.'footer.php';?>      

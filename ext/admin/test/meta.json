@@ -1,0 +1,16 @@
+{
+"label":"Test",
+"menu":"Admin",
+"order":"3",
+"icon":"fa-building-o",
+"user_levels":["Admin","Manager"],
+
+"permissions":
+	{
+		"Manager":{
+			"Add Record":"No",
+			"Edit Record":"No",
+			"Delete Record":"No"
+		}
+	}	
+}
